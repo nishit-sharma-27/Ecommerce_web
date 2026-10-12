@@ -4,8 +4,10 @@ import Home from './pages/home';
 import Auth from './pages/auth';
 import Checkout from './pages/checkout';
 import Navbar from './components/Navbar';
+import AuthProvider from './context/AuthContext';
 function App() {
   return (
+    <AuthProvider>
     <div className="app">
       <Navbar/>
       <Routes>
@@ -14,6 +16,7 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </div>
+    </AuthProvider>
   );
 }
 
